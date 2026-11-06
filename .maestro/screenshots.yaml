@@ -21,7 +21,7 @@ appId: com.lexiloop.app
 - tapOn:
     id: "create-account"
 - extendedWaitUntil:
-    visible: "What is your English level?"
+    visible: "What is your English level.*"
     timeout: 10000
 - takeScreenshot: 03-level-setup
 - tapOn:

@@ -1,0 +1,92 @@
+# Stills for the README: one per key screen, taken at the top of each screen once its content
+# is visible. Real taps on testIDs (no deep links). No clearState: the warm-up launch reset it.
+appId: com.lexiloop.app
+---
+- launchApp
+- runFlow:
+    when:
+      visible: ".*isn't responding.*"
+    commands:
+      - tapOn: "Wait"
+- extendedWaitUntil:
+    visible: "Get started"
+    timeout: 60000
+- takeScreenshot: 01-welcome
+- tapOn:
+    id: "get-started"
+- extendedWaitUntil:
+    visible: "Create your account"
+    timeout: 10000
+- takeScreenshot: 02-sign-up
+- tapOn:
+    id: "create-account"
+- extendedWaitUntil:
+    visible: "What is your English level?"
+    timeout: 10000
+- takeScreenshot: 03-level-setup
+- tapOn:
+    id: "start-learning"
+- extendedWaitUntil:
+    visible: "Travel and transport"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: 04-home
+- tapOn:
+    id: "continue-lesson"
+- extendedWaitUntil:
+    visible: "commute"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: 05-word-card
+- tapOn:
+    id: "next-word"
+- extendedWaitUntil:
+    visible: "can be trusted"
+    timeout: 10000
+- tapOn:
+    id: "option-1"
+- extendedWaitUntil:
+    visible: "Correct!"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: 06-quiz
+- tapOn:
+    id: "quiz-continue"
+- extendedWaitUntil:
+    visible: "Lesson complete!"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: 07-lesson-complete
+- tapOn:
+    id: "back-home"
+- extendedWaitUntil:
+    visible: "Completed today"
+    timeout: 10000
+- tapOn:
+    id: "tab-words"
+- extendedWaitUntil:
+    visible: "Search words"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: 08-words
+- tapOn:
+    id: "tab-progress"
+- extendedWaitUntil:
+    visible: "XP this week"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: 09-progress
+- tapOn:
+    id: "tab-profile"
+- extendedWaitUntil:
+    visible: "Sound effects"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: 10-profile

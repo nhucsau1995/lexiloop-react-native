@@ -1,0 +1,65 @@
+# Paced walkthrough for screenshots/demo.gif: 9 taps, about 20 s of script. Maestro records
+# the screen itself (startRecording after the welcome screen is up), so JVM start-up and the
+# dialog guard are not in the video. No clearState: the warm-up launch already reset the app.
+appId: com.lexiloop.app
+---
+- launchApp
+- runFlow:
+    when:
+      visible: ".*isn't responding.*"
+    commands:
+      - tapOn: "Wait"
+- extendedWaitUntil:
+    visible: "Get started"
+    timeout: 60000
+- startRecording: demo
+- tapOn:
+    id: "get-started"
+- extendedWaitUntil:
+    visible: "Create your account"
+    timeout: 10000
+- tapOn:
+    id: "create-account"
+- extendedWaitUntil:
+    visible: "What is your English level?"
+    timeout: 10000
+- tapOn:
+    id: "start-learning"
+- extendedWaitUntil:
+    visible: "Travel and transport"
+    timeout: 10000
+- tapOn:
+    id: "continue-lesson"
+- extendedWaitUntil:
+    visible: "commute"
+    timeout: 10000
+- tapOn:
+    id: "next-word"
+- extendedWaitUntil:
+    visible: "can be trusted"
+    timeout: 10000
+- tapOn:
+    id: "option-1"
+- extendedWaitUntil:
+    visible: "Correct!"
+    timeout: 10000
+- tapOn:
+    id: "quiz-continue"
+- extendedWaitUntil:
+    visible: "Lesson complete!"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    id: "back-home"
+- extendedWaitUntil:
+    visible: "Completed today"
+    timeout: 10000
+- tapOn:
+    id: "tab-progress"
+- extendedWaitUntil:
+    visible: "XP this week"
+    timeout: 10000
+- waitForAnimationToEnd:
+    timeout: 3000
+- stopRecording

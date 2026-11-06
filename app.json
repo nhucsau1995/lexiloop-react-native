@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "LexiLoop",
+    "slug": "lexiloop",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "lexiloop",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.lexiloop.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F4FBFC",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.lexiloop.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-sqlite",
+      [
+        "expo-splash-screen",
+        { "image": "./assets/splash-icon.png", "imageWidth": 160, "backgroundColor": "#F4FBFC" }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

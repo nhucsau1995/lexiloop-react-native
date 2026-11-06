@@ -1,0 +1,368 @@
+{
+  "title": "LexiLoop",
+  "slug": "lexiloop",
+  "domain": "education",
+  "style": "bright",
+  "allow3D": false,
+  "features": [
+    "User registration (email + password) and learner profile",
+    "Onboarding: pick English level and daily goal",
+    "Learn new words with word cards (meaning, example, pronunciation tap)",
+    "Short exercises: multiple-choice quiz with instant feedback",
+    "Lesson complete summary with XP and streak",
+    "Saved word list with mastery status",
+    "Progress tracking: streak, XP per day chart, words learned, level progress",
+    "Profile with stats and settings",
+    "Basic animations and smooth screen transitions",
+    "REST API client to a Node.js backend (mocked locally), offline word cache"
+  ],
+  "screenCount": 11,
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": [
+        "Learn",
+        "Words",
+        "Progress",
+        "Profile"
+      ],
+      "icons": [
+        "book-open",
+        "layers",
+        "bar-chart-2",
+        "user"
+      ],
+      "note": "Flat white bar, 1px top border, 4 tabs in this exact order. Active tab: icon + label in accentFill #007F9B with a small pill indicator behind the icon in accentTint; inactive: text.secondary."
+    },
+    "statusBar": "Top header row: screen title left in display font, streak chip right (flame icon + '12' on accentTint).",
+    "controls": "Primary button: pill, 56px tall, accentFill #007F9B with white label (pressed darker, disabled 40% opacity). Secondary button: pill, white with 1.5px borderStrong border, ink label. Text input: 12px radius, 52px tall, white, borderStrong border, focus = 2px accentFill ring, error = danger border + 13px helper. Card: white, 20px radius, soft shadow. Chip: pill, 32px tall, accentTint fill with accentFill text, 13px label. Quiz option: 16px radius white card with 1.5px border; selected-correct = success tint + check icon, wrong = danger tint + x icon."
+  },
+  "screens": [
+    {
+      "name": "welcome",
+      "purpose": "First launch: brand promise and entry to sign up or log in",
+      "content": "Real photo hero of a young adult smiling while studying with a phone at a sunny cafe table; app name LexiLoop; headline 'Learn 5 new English words a day'; subline 'Short lessons, quick quizzes, real progress'; primary button 'Get started'; text button 'I already have an account'",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "sign-up",
+      "purpose": "Create an account",
+      "content": "Title 'Create your account'; inputs Name (Maya Chen), Email (maya.chen@mail.com), Password (masked, eye toggle, helper 'At least 8 characters'); primary 'Create account'; divider 'or'; secondary 'Continue as guest'; footnote 'By continuing you agree to the Terms'",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "level-setup",
+      "purpose": "Pick English level and daily goal to personalize lessons",
+      "content": "Step indicator 2 of 2; title 'What is your English level?'; 3 selectable cards Beginner (A1-A2), Intermediate (B1-B2, selected), Advanced (C1); section 'Daily goal' with chips 5 words / 10 words (selected) / 15 words; primary 'Start learning'",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "home",
+      "purpose": "Daily dashboard: today's lesson, goal ring, streak",
+      "content": "Greeting 'Good morning, Maya'; streak chip 12 days; FOCAL hero gradient card 'Today's lesson: Travel and transport' with progress ring 6/10 words and button 'Continue'; row 'Word of the day: wanderlust' card with phonetic /ˈwɒn.də.lʌst/; list 'Up next' with 3 lesson rows (Food and cooking 10 words, Work and office 8 words, Feelings 12 words) each with real photo thumbnail",
+      "group": "core",
+      "nav": "Learn",
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "name": "home-empty",
+      "purpose": "First-run Learn tab before any lesson",
+      "content": "Greeting 'Welcome, Maya'; real photo of an open notebook and a cup of tea on a desk; title 'Your first lesson is ready'; body 'Learn 10 everyday words in about 5 minutes'; primary 'Start lesson 1'; streak chip 0 days",
+      "group": "core",
+      "nav": "Learn",
+      "states": [
+        "empty"
+      ]
+    },
+    {
+      "name": "word-card",
+      "purpose": "Learn a new word: meaning, example, pronunciation",
+      "content": "Top bar: close X, progress bar 4 of 10; FOCAL big word card 'commute' in display font, phonetic /kəˈmjuːt/, speaker button 'Listen', part of speech chip 'verb', real photo of a person on a city train; meaning 'to travel regularly between home and work'; example sentence 'I commute to the office by train.'; buttons 'I know it' (secondary) and 'Next' (primary)",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "quiz",
+      "purpose": "Short exercise: choose the right meaning",
+      "content": "Top bar: close X, progress bar 7 of 10, hearts 3; prompt 'Choose the meaning of'; FOCAL word 'reliable'; 4 option cards: 'easy to break', 'can be trusted' (selected, correct, success tint + check), 'very expensive', 'hard to find'; bottom feedback sheet in success tint 'Correct! +10 XP' with primary 'Continue'",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "lesson-complete",
+      "purpose": "Celebrate the finished lesson with XP and streak",
+      "content": "FOCAL large '+80 XP' numeral on gradient circle; title 'Lesson complete!'; stats row: 10 words, 90% accuracy, 4 min; streak chip '13 day streak'; list of 3 new words learned (commute, reliable, itinerary) with check marks; primary 'Back to home'; secondary 'Review mistakes'",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "words",
+      "purpose": "Saved word list with mastery status",
+      "content": "Title 'My words' with count 86; search input 'Search words'; filter chips All / Learning / Mastered; list rows: word + short meaning + mastery dots (commute - travel to work, mastered; itinerary - a planned route, learning; reliable - can be trusted, mastered; wanderlust - strong wish to travel, new; deadline - latest time to finish, learning; borrow - take and give back, mastered)",
+      "group": "core",
+      "nav": "Words",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "progress",
+      "purpose": "Track learning progress over time",
+      "content": "FOCAL stat '12 day streak' with flame; weekly XP bar chart Mon-Sun (40, 80, 60, 120, 90, 0, 70) in accent with today highlighted; stat cards: Words learned 86, Accuracy 88%, Minutes this week 47; level card 'Intermediate B1' progress bar 62% to B2",
+      "group": "core",
+      "nav": "Progress",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "profile",
+      "purpose": "Learner profile and settings",
+      "content": "Real photo avatar of Maya Chen, young woman, friendly smile, soft daylight; name Maya Chen, email maya.chen@mail.com, 'Learning since Sep 2026'; badges row (7-day streak, 50 words, Quiz ace); settings list: Daily goal 10 words, Reminder 8:00 PM, Sound effects toggle on, English level Intermediate; secondary 'Log out'",
+      "group": "settings",
+      "nav": "Profile",
+      "states": [
+        "default"
+      ]
+    }
+  ],
+  "bannedTerms": [
+    "AI tutor",
+    "Speech recognition",
+    "Certificate",
+    "Live class",
+    "Premium"
+  ],
+  "designSystem": {
+    "variant": "P79",
+    "theme": "light",
+    "frame": "393x852 mobile, top inset 59px, bottom inset 34px",
+    "color": {
+      "background": "#F4FBFC",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#EAF5F7",
+      "accent": "#00A9CE",
+      "accentFill": "#007791",
+      "accentTint": "#DDF3F8",
+      "accentPressed": "#006F88",
+      "support": "#A7F797",
+      "text": {
+        "primary": "#0C1B1F",
+        "secondary": "#46595E",
+        "tertiary": "#5F7277"
+      },
+      "border": "#D5E4E7",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "gradient": [
+        "#007791",
+        "#006F88"
+      ],
+      "statusOn": {
+        "warning": {
+          "fg": "#A75906",
+          "tint": "#FAEFE1"
+        },
+        "success": {
+          "fg": "#0E7C3A",
+          "tint": "#E3F4E9"
+        },
+        "danger": {
+          "fg": "#CE2020",
+          "tint": "#FBE5E5"
+        },
+        "info": {
+          "fg": "#00738C",
+          "tint": "#E0EFF2"
+        }
+      },
+      "supportStrong": "#25AA08",
+      "borderStrong": "#699C9F"
+    },
+    "type": {
+      "fontFamily": "Chakra Petch",
+      "displayFamily": "Chakra Petch",
+      "numeralFamily": "JetBrains Mono",
+      "display": "32 / 700 / -0.02em",
+      "title": "20 / 600",
+      "body": "16 / 400",
+      "label": "14 / 500",
+      "caption": "13 / 500",
+      "minSize": "12px (13px chips and tags, 14px safety or legal text)",
+      "scaleRule": "Use only the 5 declared sizes (display, title, body, label, caption)."
+    },
+    "radius": {
+      "card": 20,
+      "control": 14,
+      "input": 12,
+      "pill": 999
+    },
+    "spacing": "8pt scale (4, 8, 12, 16, 24, 32); screen edge padding 20px",
+    "elevation": "card = 0 1px 2px rgba(12,27,31,.04) + 0 8px 24px rgba(12,27,31,.06)",
+    "icons": "Lucide rounded outline, 24px, 1.75 stroke",
+    "a11y": "white labels only on accentFill; bright accent for large fills/icons; text on gradients >= 4.5:1; tap targets >= 44pt"
+  },
+  "tokenCheck": {
+    "results": [
+      {
+        "pair": "text.primary on background",
+        "ratio": 16.82,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.primary on surface",
+        "ratio": 17.61,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on background",
+        "ratio": 7.03,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on surface",
+        "ratio": 7.37,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on background",
+        "ratio": 4.82,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on surface",
+        "ratio": 5.05,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white label on accentFill (buttons)",
+        "ratio": 4.66,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "accentFill text on accentTint (chips, selected)",
+        "ratio": 4.05,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#007791",
+        "after": 4.51
+      },
+      {
+        "pair": "accentFill as link text on background",
+        "ratio": 4.95,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white on hero gradient (both stops)",
+        "ratio": 5.19,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "warning text on its tint and on surface",
+        "ratio": 2.81,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#A75906",
+        "after": 4.54
+      },
+      {
+        "pair": "success text on its tint and on surface",
+        "ratio": 2.89,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0E7C3A",
+        "after": 4.64
+      },
+      {
+        "pair": "danger text on its tint and on surface",
+        "ratio": 4.01,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#CE2020",
+        "after": 4.53
+      },
+      {
+        "pair": "info text on its tint and on surface",
+        "ratio": 4.4,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#00738C",
+        "after": 4.65
+      },
+      {
+        "pair": "support as chart line / icon on surface (non-text 3:1)",
+        "ratio": 1.28,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#25AA08",
+        "after": 3.07
+      },
+      {
+        "pair": "input / control border on surface (non-text 3:1)",
+        "ratio": 1.31,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#699C9F",
+        "after": 3.06
+      }
+    ],
+    "changed": {
+      "accentFill": {
+        "from": "#007F9B",
+        "to": "#007791"
+      }
+    },
+    "passed": true
+  }
+}

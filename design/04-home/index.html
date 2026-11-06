@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LexiLoop - Learn</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Chakra Petch & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "text-primary": "#0C1B1F",
+            "status-success-bg": "#E3F4E9",
+            "tertiary-fixed": "#ffdcc2",
+            "on-tertiary-fixed": "#2e1500",
+            "secondary-fixed": "#b6ebff",
+            "status-warning-bg": "#FAEFE1",
+            "primary-fixed": "#b5ebff",
+            "surface-dim": "#d7dadc",
+            "surface": "#FFFFFF",
+            "primary": "#005d72",
+            "accent-fill": "#007791",
+            "on-background": "#181c1e",
+            "surface-container": "#ebeef0",
+            "support": "#A7F797",
+            "support-strong": "#25AA08",
+            "surface-container-highest": "#e0e3e5",
+            "secondary-container": "#5ad8ff",
+            "outline-variant": "#bec8cd",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#57d5fc",
+            "tertiary": "#804609",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#ffede1",
+            "on-secondary-container": "#005c72",
+            "primary-container": "#007791",
+            "surface-tint": "#00677e",
+            "status-info-bg": "#E0EFF2",
+            "background": "#F4FBFC",
+            "tertiary-container": "#9d5e22",
+            "on-tertiary-fixed-variant": "#6d3900",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#ffb77c",
+            "inverse-primary": "#7cd2ef",
+            "surface-container-low": "#f1f4f6",
+            "secondary": "#00677f",
+            "on-secondary-fixed-variant": "#004e60",
+            "accent-tint": "#DDF3F8",
+            "status-danger-bg": "#FBE5E5",
+            "surface-variant": "#e0e3e5",
+            "on-surface-variant": "#3f484c",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#7cd2ef",
+            "on-surface": "#181c1e",
+            "control-border": "#699C9F",
+            "status-info-text": "#00738C",
+            "surface-container-high": "#e5e9eb",
+            "on-tertiary": "#ffffff",
+            "inverse-on-surface": "#eef1f3",
+            "text-tertiary": "#5F7277",
+            "on-primary-fixed-variant": "#004e60",
+            "accent-pressed": "#006F88",
+            "surface-alt": "#EAF5F7",
+            "on-secondary-fixed": "#001f28",
+            "surface-container-lowest": "#ffffff",
+            "text-secondary": "#46595E",
+            "surface-bright": "#f7fafc",
+            "hairline-divider": "#D5E4E7",
+            "status-warning-text": "#A75906",
+            "status-success-text": "#0E7C3A",
+            "on-primary-container": "#daf4ff",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#001f28",
+            "status-danger-text": "#CE2020",
+            "inverse-surface": "#2d3133",
+            "outline": "#6f797d"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-2xl": "32px",
+            "margin": "20px",
+            "space-md": "12px",
+            "space-lg": "16px",
+            "space-sm": "8px",
+            "space-xs": "4px",
+            "space-xl": "24px",
+            "gutter": "16px"
+          },
+          "fontFamily": {
+            "numeral": ["JetBrains Mono"],
+            "label": ["Chakra Petch"],
+            "title": ["Chakra Petch"],
+            "caption": ["Chakra Petch"],
+            "display": ["Chakra Petch"],
+            "body": ["Chakra Petch"]
+          },
+          "fontSize": {
+            "numeral": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "700"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "500"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-card-shadow {
+      box-shadow: 0 1px 2px rgba(12,27,31,.04), 0 8px 24px rgba(12,27,31,.06);
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #007791 0%, #006F88 100%);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container font-body antialiased flex justify-center items-start min-h-screen p-0 sm:py-6 text-text-primary">
+<!-- Mobile Frame Container (393px width constraint) -->
+<main class="w-full max-w-[393px] min-h-[852px] bg-background relative flex flex-col overflow-hidden sm:rounded-[40px] sm:shadow-2xl">
+<!-- Top System Safe Area -->
+<div class="h-[52px] w-full flex items-center justify-between px-7 shrink-0 text-text-primary select-none pt-2">
+<span class="font-numeral text-[14px] font-semibold tracking-tight">09:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- Scrollable Main Content -->
+<div class="flex-1 overflow-y-auto px-5 pb-[100px] flex flex-col gap-6">
+<!-- Header Section -->
+<section class="flex items-start justify-between pt-3">
+<div class="flex flex-col gap-0.5">
+<h1 class="font-display text-display text-text-primary">Good morning, Maya</h1>
+<p class="font-caption text-caption text-text-secondary">Ready for 10 new words?</p>
+</div>
+<!-- Streak Chip -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-tint text-accent-fill shrink-0 mt-1 cursor-pointer active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[18px] text-accent-fill" data-icon="local_fire_department" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-numeral text-[14px] font-bold text-accent-fill leading-none">12</span>
+</div>
+</section>
+<!-- FOCAL Hero Card -->
+<section class="hero-gradient rounded-[20px] p-6 text-surface custom-card-shadow relative overflow-hidden flex flex-col justify-between min-h-[220px]">
+<!-- Decorative Ambient Light Shape -->
+<div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+<div>
+<!-- Overline -->
+<span class="font-caption text-[12px] uppercase tracking-wider font-semibold text-white/80 block mb-1">
+            TODAY'S LESSON
+          </span>
+<div class="flex items-start justify-between gap-4">
+<div>
+<h2 class="font-title text-title text-surface font-bold mb-1">Travel and transport</h2>
+<p class="font-caption text-caption text-white/80">About 3 min left</p>
+</div>
+<!-- Progress Metric Dial / Badge -->
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center bg-white/15 rounded-full backdrop-blur-sm border border-white/20">
+<span class="font-numeral text-[15px] font-bold text-surface tracking-tight">6/10</span>
+</div>
+</div>
+</div>
+<!-- Primary Pill Button -->
+<div class="pt-5">
+<button class="w-full h-[48px] bg-surface rounded-full flex items-center justify-center gap-2 text-accent-fill font-label text-label font-bold shadow-sm active:scale-[0.98] active:bg-surface-alt transition-all duration-150" type="button">
+<span>Continue</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Word of the Day Card -->
+<section class="bg-surface rounded-[20px] p-5 custom-card-shadow flex flex-col gap-3.5 border border-hairline-divider/50">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-accent-tint text-accent-fill font-label text-[12px] font-bold tracking-wide">
+            WORD OF THE DAY
+          </span>
+<!-- Audio Speaker Button -->
+<button aria-label="Play pronunciation" class="w-9 h-9 rounded-full bg-accent-tint text-accent-fill flex items-center justify-center active:scale-95 active:bg-accent-pressed/20 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="volume_up">volume_up</span>
+</button>
+</div>
+<div>
+<h3 class="font-display text-[26px] leading-8 font-bold text-text-primary tracking-tight">wanderlust</h3>
+<span class="font-numeral text-[13px] text-text-secondary mt-0.5 block tracking-normal">/ˈwɒn.də.lʌst/</span>
+</div>
+<p class="font-body text-[15px] text-text-primary leading-snug">
+          a strong wish to travel
+        </p>
+</section>
+<!-- Up Next Section -->
+<section class="flex flex-col gap-3">
+<h2 class="font-title text-title text-text-primary">Up next</h2>
+<div class="flex flex-col gap-2.5">
+<!-- Row 1: Food and cooking -->
+<div class="bg-surface rounded-[20px] p-3 flex items-center justify-between gap-3 custom-card-shadow border border-hairline-divider/40 active:scale-[0.99] transition-transform duration-150 cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-[56px] h-[56px] rounded-[14px] object-cover shrink-0" data-alt="A vibrant bird's-eye view of fresh colorful vegetables including crisp carrots, radishes, kale, and cherry tomatoes laid out organically on a rustic wooden preparation table with warm gentle culinary morning sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOpr6yFgUgWeDZUcVPR-gBhm89ceOtUELhVJBezYt3k2nxPGHGjRd-okXw9iYPkpiETXLNHkYcuzRLVM49rHnEgrkOBhbeN8eiA7sCFHNWsPuQRK2xiJp9Xemf-GYaVqomkRphfhmRKRsHkQSCVnTm86v-F63G6O4wnKFopPWaEE1-7Mf_WY7t5-KhYnZDVQ8KKB-qGhYhJdSCwUZ_xpRZ4Tujnc-Jmoqi18UjuRkzVOMvv4aITR-3C0ELmo-r6Lxquvyma-S7Ss9knQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-[15px] font-bold text-text-primary truncate">Food and cooking</span>
+<span class="font-numeral text-caption text-text-secondary mt-0.5">10 words</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Row 2: Work and office -->
+<div class="bg-surface rounded-[20px] p-3 flex items-center justify-between gap-3 custom-card-shadow border border-hairline-divider/40 active:scale-[0.99] transition-transform duration-150 cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-[56px] h-[56px] rounded-[14px] object-cover shrink-0" data-alt="A clean modern office workspace bathed in soft daylight featuring a slim laptop open on a wooden desk, a sleek mouse pad, a ceramic cup of hot coffee, and a neat open notebook with crisp pen notes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX9vVqTIgM_c1ejZ7qbAOWT8kYKfBPhBmDMCxUwlrje2knFdVrF3DOinaAiYILck0FGtO-tg_VjakMgunnRxwFALd1xxFXn1XXeu3IcyosZKxPbgonIpJiI8WcE35p85-yTY8EHa3Izk3Ga0kz2vQ_1OGBRWKIUCCF_R8eO8eYUL6iehxyiLwZg4vayGuZV-uj4xeWfmsCz0-0QusF_RBdGSt6X9f5RGmrAFbI41eBmvqpOEIK2g5N9CZkhY9otOqSANqKTFcdOVwDBA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-[15px] font-bold text-text-primary truncate">Work and office</span>
+<span class="font-numeral text-caption text-text-secondary mt-0.5">8 words</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Row 3: Feelings -->
+<div class="bg-surface rounded-[20px] p-3 flex items-center justify-between gap-3 custom-card-shadow border border-hairline-divider/40 active:scale-[0.99] transition-transform duration-150 cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-[56px] h-[56px] rounded-[14px] object-cover shrink-0" data-alt="Two cheerful young women sitting together on an outdoor urban bench laughing joyfully under golden hour sunlight, conveying vibrant authentic emotional connection, warmth, empathy, and positive human energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtrG1k3zO-nT4ygY4uJT7It-WrmSaYiGFQ1ZYtk4C_0FJSNSraGPUcz8xu6jrLtXm1R4ypOGVgQ8xzu5gQa5B7XWTKtIo5xf5P8KkNkefga6d3EViZPPpk17XZc663dPjgvC-FIOFjd5VAkuE0OxaecS--RQ4YvmNWwizATGXUy7eh9pUIrYemImkbiNWHuBlxwR8iyvn1hDTPSXOTOv2dXUqMSEfcRvNM442WwbSYn_v8MTBO8gd6YrzRo289Vkp_uqesyI2ovaq6Kg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-[15px] font-bold text-text-primary truncate">Feelings</span>
+<span class="font-numeral text-caption text-text-secondary mt-0.5">12 words</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Navigation Bar (Mandated Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-2 pb-8 max-w-[393px] mx-auto bg-surface border-t border-hairline-divider">
+<!-- Tab 1: Learn (Active) -->
+<a class="flex flex-col items-center justify-center text-accent-fill font-caption [&amp;&gt;span:first-child]:bg-accent-tint [&amp;&gt;span:first-child]:rounded-full [&amp;&gt;span:first-child]:px-3 [&amp;&gt;span:first-child]:py-1 active:scale-95 transition-transform duration-150" href="#learn">
+<span class="material-symbols-outlined text-[22px]" data-icon="menu_book">menu_book</span>
+<span class="mt-1 font-caption">Learn</span>
+</a>
+<!-- Tab 2: Words (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary font-caption hover:bg-surface-alt rounded-lg px-2 py-1 active:scale-95 transition-transform duration-150" href="#words">
+<span class="material-symbols-outlined text-[22px]" data-icon="layers">layers</span>
+<span class="mt-1 font-caption">Words</span>
+</a>
+<!-- Tab 3: Progress (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary font-caption hover:bg-surface-alt rounded-lg px-2 py-1 active:scale-95 transition-transform duration-150" href="#progress">
+<span class="material-symbols-outlined text-[22px]" data-icon="bar_chart">bar_chart</span>
+<span class="mt-1 font-caption">Progress</span>
+</a>
+<!-- Tab 4: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary font-caption hover:bg-surface-alt rounded-lg px-2 py-1 active:scale-95 transition-transform duration-150" href="#profile">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="mt-1 font-caption">Profile</span>
+</a>
+</nav>
+</main>
+</body></html>

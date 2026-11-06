@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LexiLoop - Sign Up</title>
+<!-- Google Fonts: Chakra Petch & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS Play CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#005c72",
+            "surface-container-highest": "#e0e3e5",
+            "secondary-fixed": "#b6ebff",
+            "text-primary": "#0C1B1F",
+            "background": "#F4FBFC",
+            "inverse-primary": "#7cd2ef",
+            "status-warning-text": "#A75906",
+            "on-secondary-fixed": "#001f28",
+            "hairline-divider": "#D5E4E7",
+            "inverse-surface": "#2d3133",
+            "on-surface": "#181c1e",
+            "on-background": "#181c1e",
+            "status-success-bg": "#E3F4E9",
+            "secondary-fixed-dim": "#57d5fc",
+            "surface-alt": "#EAF5F7",
+            "control-border": "#699C9F",
+            "accent-tint": "#DDF3F8",
+            "surface-container": "#ebeef0",
+            "on-tertiary-fixed-variant": "#6d3900",
+            "secondary": "#00677f",
+            "tertiary-fixed": "#ffdcc2",
+            "on-surface-variant": "#3f484c",
+            "outline": "#6f797d",
+            "tertiary-container": "#9d5e22",
+            "status-danger-text": "#CE2020",
+            "support": "#A7F797",
+            "secondary-container": "#5ad8ff",
+            "on-primary-fixed": "#001f28",
+            "on-primary-fixed-variant": "#004e60",
+            "tertiary-fixed-dim": "#ffb77c",
+            "status-success-text": "#0E7C3A",
+            "on-error-container": "#93000a",
+            "status-danger-bg": "#FBE5E5",
+            "on-secondary-fixed-variant": "#004e60",
+            "primary-fixed": "#b5ebff",
+            "primary-fixed-dim": "#7cd2ef",
+            "surface-variant": "#e0e3e5",
+            "status-warning-bg": "#FAEFE1",
+            "on-primary-container": "#daf4ff",
+            "primary": "#005d72",
+            "surface-bright": "#f7fafc",
+            "outline-variant": "#bec8cd",
+            "on-tertiary-fixed": "#2e1500",
+            "text-tertiary": "#5F7277",
+            "status-info-bg": "#E0EFF2",
+            "surface-tint": "#00677e",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#ffede1",
+            "surface-container-low": "#f1f4f6",
+            "support-strong": "#25AA08",
+            "on-secondary": "#ffffff",
+            "accent-pressed": "#006F88",
+            "tertiary": "#804609",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-dim": "#d7dadc",
+            "surface-container-high": "#e5e9eb",
+            "surface": "#FFFFFF",
+            "status-info-text": "#00738C",
+            "inverse-on-surface": "#eef1f3",
+            "accent-fill": "#007791",
+            "text-secondary": "#46595E",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#007791",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "8px",
+            "space-2xl": "32px",
+            "gutter": "16px",
+            "space-xs": "4px",
+            "space-md": "12px",
+            "margin": "20px",
+            "space-xl": "24px",
+            "space-lg": "16px"
+          },
+          "fontFamily": {
+            "numeral": ["JetBrains Mono"],
+            "label": ["Chakra Petch"],
+            "body": ["Chakra Petch"],
+            "display": ["Chakra Petch"],
+            "title": ["Chakra Petch"],
+            "caption": ["Chakra Petch"]
+          },
+          "fontSize": {
+            "numeral": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Ambient Elevation shadow treatment per style guide */
+    .ambient-elevation {
+      box-shadow: 0 1px 2px rgba(12,27,31,0.04), 0 8px 24px rgba(12,27,31,0.06);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-highest min-h-screen flex items-center justify-center p-0 m-0 font-body antialiased selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Frame Container (Fixed 393px by 852px viewport) -->
+<main class="w-[393px] h-[852px] bg-background relative flex flex-col justify-between overflow-hidden shadow-2xl rounded-[44px] border border-hairline-divider">
+<!-- Top Safe Area Padding (~59px) & Navigation Bar -->
+<header class="w-full pt-[59px] px-5 flex flex-col shrink-0">
+<div class="h-10 flex items-center">
+<!-- Back Navigation Button -->
+<button aria-label="Go back" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-text-primary hover:bg-accent-tint active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+<!-- Header Title & Subtitle Section -->
+<div class="mt-4">
+<h1 class="font-display text-display text-text-primary">Create your account</h1>
+<p class="font-body text-body text-text-secondary mt-1">Save your words and progress</p>
+</div>
+</header>
+<!-- Main Content Canvas / Scrollable Form Container -->
+<section class="flex-1 px-5 pt-7 pb-2 flex flex-col justify-between">
+<!-- Input Fields Cluster (16px to 20px rhythm) -->
+<div class="flex flex-col gap-4">
+<!-- Field 1: Full Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label text-label text-text-primary" for="full-name">Name</label>
+<div class="relative w-full">
+<input class="w-full h-[52px] bg-surface rounded-xl border border-control-border px-4 font-body text-body text-text-primary focus:outline-none focus:ring-2 focus:ring-accent-fill focus:border-transparent transition-all placeholder:text-text-tertiary" id="full-name" type="text" value="Maya Chen"/>
+</div>
+</div>
+<!-- Field 2: Email (Active Focus State as requested) -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label text-label text-text-primary" for="email">Email</label>
+<div class="relative w-full">
+<input class="w-full h-[52px] bg-surface rounded-xl border border-transparent ring-2 ring-accent-fill px-4 font-body text-body text-text-primary focus:outline-none transition-all placeholder:text-text-tertiary" id="email" type="email" value="maya.chen@mail.com"/>
+</div>
+</div>
+<!-- Field 3: Password with mask and toggle icon -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label text-label text-text-primary" for="password">Password</label>
+<div class="relative w-full flex items-center">
+<input class="w-full h-[52px] bg-surface rounded-xl border border-control-border pl-4 pr-12 font-body text-body text-text-primary tracking-widest focus:outline-none focus:ring-2 focus:ring-accent-fill focus:border-transparent transition-all placeholder:text-text-tertiary" id="password" type="password" value="supersecretpassword"/>
+<button aria-label="Toggle password visibility" class="absolute right-3.5 w-8 h-8 rounded-full flex items-center justify-center text-text-secondary hover:bg-surface-alt active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="visibility">visibility</span>
+</button>
+</div>
+<!-- Helper text -->
+<span class="font-caption text-caption text-text-tertiary pl-0.5">At least 8 characters</span>
+</div>
+</div>
+<!-- Action Group -->
+<div class="flex flex-col gap-4 mt-auto pt-6">
+<!-- Primary Action Button -->
+<button class="w-full h-14 bg-accent-fill text-surface rounded-full font-label text-label flex items-center justify-center active:bg-accent-pressed active:scale-95 transition-all ambient-elevation" type="button">
+          Create account
+        </button>
+<!-- Hairline Divider with centered 'or' badge -->
+<div class="relative flex items-center justify-center my-0.5">
+<div class="w-full border-t border-hairline-divider absolute"></div>
+<span class="relative bg-background px-3 font-caption text-caption text-text-tertiary">or</span>
+</div>
+<!-- Secondary Action Button -->
+<button class="w-full h-14 bg-surface text-text-primary border-[1.5px] border-control-border rounded-full font-label text-label flex items-center justify-center hover:bg-surface-alt active:scale-95 transition-all" type="button">
+          Continue as guest
+        </button>
+<!-- Footnote / Legal link -->
+<p class="text-center font-label text-label text-text-secondary pt-1">
+          By continuing you agree to the <a class="text-accent-fill hover:underline focus:outline-none font-label" href="#terms">Terms</a>
+</p>
+</div>
+</section>
+<!-- Bottom Safe Area Clear Space (~34px) with iOS-style Home Indicator -->
+<footer class="h-[34px] w-full shrink-0 flex items-center justify-center">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</footer>
+</main>
+<!-- Interactive script for password reveal toggle -->
+<script>
+    const passwordInput = document.getElementById('password');
+    const toggleButton = passwordInput.nextElementSibling;
+    const toggleIcon = toggleButton.querySelector('span');
+
+    toggleButton.addEventListener('click', () => {
+      const isPassword = passwordInput.getAttribute('type') === 'password';
+      passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+      if (isPassword) {
+        toggleIcon.textContent = 'visibility_off';
+        passwordInput.classList.remove('tracking-widest');
+      } else {
+        toggleIcon.textContent = 'visibility';
+        passwordInput.classList.add('tracking-widest');
+      }
+    });
+  </script>
+</body></html>

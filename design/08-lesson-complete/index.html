@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lesson Complete - LexiLoop</title>
+<!-- Google Fonts: Chakra Petch and JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "status-warning-bg": "#FAEFE1",
+            "secondary": "#00677f",
+            "inverse-on-surface": "#eef1f3",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#2d3133",
+            "on-error": "#ffffff",
+            "status-info-bg": "#E0EFF2",
+            "on-primary-fixed": "#001f28",
+            "on-tertiary-fixed-variant": "#6d3900",
+            "text-secondary": "#46595E",
+            "on-secondary-container": "#005c72",
+            "surface-container-highest": "#e0e3e5",
+            "text-tertiary": "#5F7277",
+            "surface-container": "#ebeef0",
+            "surface-dim": "#d7dadc",
+            "on-secondary-fixed": "#001f28",
+            "outline-variant": "#bec8cd",
+            "status-success-text": "#0E7C3A",
+            "surface-variant": "#e0e3e5",
+            "on-primary-container": "#daf4ff",
+            "background": "#F4FBFC",
+            "surface-container-high": "#e5e9eb",
+            "status-danger-text": "#CE2020",
+            "accent-tint": "#DDF3F8",
+            "hairline-divider": "#D5E4E7",
+            "surface-alt": "#EAF5F7",
+            "support-strong": "#25AA08",
+            "surface-tint": "#00677e",
+            "secondary-fixed-dim": "#57d5fc",
+            "on-secondary-fixed-variant": "#004e60",
+            "status-warning-text": "#A75906",
+            "on-tertiary-fixed": "#2e1500",
+            "on-tertiary": "#ffffff",
+            "text-primary": "#0C1B1F",
+            "control-border": "#699C9F",
+            "surface-container-low": "#f1f4f6",
+            "primary": "#005d72",
+            "on-surface-variant": "#3f484c",
+            "on-primary-fixed-variant": "#004e60",
+            "support": "#A7F797",
+            "secondary-container": "#5ad8ff",
+            "accent-fill": "#007791",
+            "primary-fixed": "#b5ebff",
+            "on-tertiary-container": "#ffede1",
+            "inverse-primary": "#7cd2ef",
+            "on-surface": "#181c1e",
+            "primary-container": "#007791",
+            "surface": "#FFFFFF",
+            "surface-bright": "#f7fafc",
+            "tertiary": "#804609",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#181c1e",
+            "status-success-bg": "#E3F4E9",
+            "on-secondary": "#ffffff",
+            "status-danger-bg": "#FBE5E5",
+            "tertiary-container": "#9d5e22",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#7cd2ef",
+            "error-container": "#ffdad6",
+            "accent-pressed": "#006F88",
+            "tertiary-fixed": "#ffdcc2",
+            "outline": "#6f797d",
+            "status-info-text": "#00738C",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#ffb77c",
+            "secondary-fixed": "#b6ebff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "gutter": "16px",
+            "space-md": "12px",
+            "space-xl": "24px",
+            "space-lg": "16px",
+            "space-2xl": "32px",
+            "margin": "20px",
+            "space-sm": "8px"
+          },
+          "fontFamily": {
+            "caption": [
+              "Chakra Petch"
+            ],
+            "title": [
+              "Chakra Petch"
+            ],
+            "label": [
+              "Chakra Petch"
+            ],
+            "numeral": [
+              "JetBrains Mono"
+            ],
+            "display": [
+              "Chakra Petch"
+            ],
+            "body": [
+              "Chakra Petch"
+            ]
+          },
+          "fontSize": {
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "500"
+              }
+            ],
+            "numeral": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "700"
+              }
+            ],
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ]
+          },
+          "boxShadow": {
+            "soft-card": "0 1px 2px rgba(12,27,31,.04), 0 8px 24px rgba(12,27,31,.06)"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container flex justify-center items-center min-h-screen p-0 m-0 antialiased selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Frame Container (393px × 852px) -->
+<main class="w-[393px] h-[852px] bg-background relative flex flex-col justify-between overflow-hidden shadow-2xl">
+<!-- Top Bar with Safe Area (~59px top inset) -->
+<header class="pt-14 px-5 pb-3 flex justify-between items-center w-full z-10 shrink-0">
+<div class="flex items-center space-x-1.5">
+<span class="text-text-primary font-display text-title tracking-tight font-bold">LexiLoop</span>
+</div>
+<div class="h-8 px-3 rounded-full bg-accent-tint flex items-center justify-center space-x-1.5 shadow-sm">
+<span class="material-symbols-outlined text-accent-fill text-[18px]" data-icon="local_fire_department" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-accent-fill font-label text-caption font-semibold">13 day streak</span>
+</div>
+</header>
+<!-- Scrollable Content Canvas -->
+<section class="flex-1 px-5 overflow-y-auto no-scrollbar pb-6 space-y-6">
+<!-- Screen Header & Title Section -->
+<div class="text-center pt-2">
+<h1 class="font-display text-display text-text-primary tracking-tight font-bold">Lesson complete!</h1>
+<p class="font-caption text-caption text-text-secondary mt-1 tracking-wide">Travel and transport</p>
+</div>
+<!-- Hero Focal Element: 200px Circle Badge -->
+<div class="flex justify-center items-center py-2">
+<div class="relative w-[216px] h-[216px] flex items-center justify-center">
+<!-- Ambient Accent Ring -->
+<div class="absolute inset-0 rounded-full border-4 border-support opacity-80 scale-100"></div>
+<div class="absolute inset-2 rounded-full border-2 border-support/30"></div>
+<!-- Focal Center Badge -->
+<div class="w-[200px] h-[200px] rounded-full bg-gradient-to-b from-accent-fill to-accent-pressed flex flex-col items-center justify-center shadow-lg relative z-10">
+<span class="material-symbols-outlined text-surface/80 text-[28px] mb-1" data-icon="stars" data-weight="fill" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-numeral text-numeral text-surface font-bold tracking-tight leading-none">+80 XP</span>
+<span class="font-label text-caption text-on-primary-container font-medium mt-1">Reward earned</span>
+</div>
+</div>
+</div>
+<!-- Stats Metrics Bento Row (3 Cards) -->
+<div class="grid grid-cols-3 gap-3">
+<!-- Stat 1: Words -->
+<div class="bg-surface rounded-[20px] p-3.5 shadow-soft-card flex flex-col items-center text-center">
+<span class="font-numeral text-title text-text-primary font-bold">10</span>
+<span class="font-caption text-caption text-text-secondary mt-0.5">words</span>
+</div>
+<!-- Stat 2: Accuracy -->
+<div class="bg-surface rounded-[20px] p-3.5 shadow-soft-card flex flex-col items-center text-center">
+<span class="font-numeral text-title text-status-success-text font-bold">90%</span>
+<span class="font-caption text-caption text-text-secondary mt-0.5">accuracy</span>
+</div>
+<!-- Stat 3: Time -->
+<div class="bg-surface rounded-[20px] p-3.5 shadow-soft-card flex flex-col items-center text-center">
+<span class="font-numeral text-title text-text-primary font-bold">4 min</span>
+<span class="font-caption text-caption text-text-secondary mt-0.5">time</span>
+</div>
+</div>
+<!-- "New words learned" Detail Card -->
+<div class="bg-surface rounded-[20px] p-5 shadow-soft-card">
+<div class="flex items-center justify-between pb-3">
+<h2 class="font-title text-title text-text-primary font-semibold">New words learned</h2>
+<span class="font-numeral text-caption text-text-tertiary">3 / 3</span>
+</div>
+<div class="divide-y divide-hairline-divider">
+<!-- Row 1: commute -->
+<div class="py-3 flex items-start space-x-3 first:pt-2">
+<span class="material-symbols-outlined text-status-success-text text-[20px] mt-0.5 shrink-0" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline space-x-2">
+<span class="font-body text-label text-text-primary font-bold">commute</span>
+<span class="font-caption text-[12px] text-text-tertiary">verb</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-0.5 leading-snug">to travel regularly between home and work</p>
+</div>
+</div>
+<!-- Row 2: reliable -->
+<div class="py-3 flex items-start space-x-3">
+<span class="material-symbols-outlined text-status-success-text text-[20px] mt-0.5 shrink-0" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline space-x-2">
+<span class="font-body text-label text-text-primary font-bold">reliable</span>
+<span class="font-caption text-[12px] text-text-tertiary">adj.</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-0.5 leading-snug">consistently good in quality or performance</p>
+</div>
+</div>
+<!-- Row 3: itinerary -->
+<div class="py-3 flex items-start space-x-3 last:pb-1">
+<span class="material-symbols-outlined text-status-success-text text-[20px] mt-0.5 shrink-0" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline space-x-2">
+<span class="font-body text-label text-text-primary font-bold">itinerary</span>
+<span class="font-caption text-[12px] text-text-tertiary">noun</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-0.5 leading-snug">a planned route or journey</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Actions Container (Clearing ~34px home indicator) -->
+<footer class="px-5 pt-3 pb-9 bg-background/90 backdrop-blur-sm flex flex-col space-y-3 shrink-0 z-20">
+<!-- Primary Action Button: 56px Pill -->
+<button class="w-full h-14 rounded-full bg-accent-fill hover:bg-accent-pressed active:scale-[0.98] transition-all duration-150 flex items-center justify-center text-surface font-label text-label font-medium shadow-sm" type="button">
+        Back to home
+      </button>
+<!-- Secondary Action Button: 56px Pill with Border -->
+<button class="w-full h-14 rounded-full bg-surface border-[1.5px] border-control-border hover:bg-surface-alt active:scale-[0.98] transition-all duration-150 flex items-center justify-center text-text-primary font-label text-label font-medium" type="button">
+        Review mistakes
+      </button>
+</footer>
+</main>
+</body></html>

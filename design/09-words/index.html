@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LexiLoop - My words</title>
+<!-- Google Fonts: Chakra Petch & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "background": "#F4FBFC",
+            "accent-tint": "#DDF3F8",
+            "support": "#A7F797",
+            "status-danger-bg": "#FBE5E5",
+            "primary-fixed": "#b5ebff",
+            "on-secondary-fixed": "#001f28",
+            "secondary-container": "#5ad8ff",
+            "on-tertiary-fixed": "#2e1500",
+            "primary": "#005d72",
+            "status-info-text": "#00738C",
+            "text-secondary": "#46595E",
+            "on-background": "#181c1e",
+            "status-info-bg": "#E0EFF2",
+            "on-tertiary": "#ffffff",
+            "inverse-primary": "#7cd2ef",
+            "inverse-on-surface": "#eef1f3",
+            "surface-alt": "#EAF5F7",
+            "on-error-container": "#93000a",
+            "surface": "#FFFFFF",
+            "secondary-fixed": "#b6ebff",
+            "outline": "#6f797d",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#ebeef0",
+            "on-secondary": "#ffffff",
+            "support-strong": "#25AA08",
+            "on-secondary-fixed-variant": "#004e60",
+            "status-warning-bg": "#FAEFE1",
+            "on-primary-fixed-variant": "#004e60",
+            "surface-dim": "#d7dadc",
+            "on-primary-container": "#daf4ff",
+            "status-danger-text": "#CE2020",
+            "tertiary": "#804609",
+            "error-container": "#ffdad6",
+            "on-primary": "#ffffff",
+            "surface-tint": "#00677e",
+            "surface-bright": "#f7fafc",
+            "text-primary": "#0C1B1F",
+            "secondary": "#00677f",
+            "hairline-divider": "#D5E4E7",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#7cd2ef",
+            "text-tertiary": "#5F7277",
+            "inverse-surface": "#2d3133",
+            "surface-container-high": "#e5e9eb",
+            "on-surface-variant": "#3f484c",
+            "control-border": "#699C9F",
+            "primary-container": "#007791",
+            "on-error": "#ffffff",
+            "accent-fill": "#007791",
+            "tertiary-fixed-dim": "#ffb77c",
+            "surface-container-highest": "#e0e3e5",
+            "on-primary-fixed": "#001f28",
+            "on-secondary-container": "#005c72",
+            "status-success-text": "#0E7C3A",
+            "status-success-bg": "#E3F4E9",
+            "surface-container-low": "#f1f4f6",
+            "tertiary-fixed": "#ffdcc2",
+            "status-warning-text": "#A75906",
+            "on-surface": "#181c1e",
+            "accent-pressed": "#006F88",
+            "on-tertiary-fixed-variant": "#6d3900",
+            "tertiary-container": "#9d5e22",
+            "outline-variant": "#bec8cd",
+            "secondary-fixed-dim": "#57d5fc",
+            "on-tertiary-container": "#ffede1",
+            "surface-variant": "#e0e3e5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "16px",
+            "gutter": "16px",
+            "space-sm": "8px",
+            "space-2xl": "32px",
+            "space-xs": "4px",
+            "margin": "20px",
+            "space-md": "12px",
+            "space-xl": "24px"
+          },
+          "fontFamily": {
+            "body": ["Chakra Petch", "sans-serif"],
+            "display": ["Chakra Petch", "sans-serif"],
+            "title": ["Chakra Petch", "sans-serif"],
+            "label": ["Chakra Petch", "sans-serif"],
+            "numeral": ["JetBrains Mono", "monospace"],
+            "caption": ["Chakra Petch", "sans-serif"]
+          },
+          "fontSize": {
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "numeral": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "card-soft": "0 1px 2px rgba(12,27,31,0.04), 0 8px 24px rgba(12,27,31,0.06)"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbars for neat horizontal pill list */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-high flex justify-center items-start min-h-screen antialiased text-text-primary">
+<!-- Mobile Device Simulation Frame: 393px width, max 852px view -->
+<div class="relative w-full max-w-[393px] min-h-[852px] bg-background flex flex-col shadow-2xl overflow-hidden pb-[88px]">
+<!-- Status Bar Area (Standard Safe Area ~44-59px) -->
+<div class="w-full h-11 px-7 flex items-center justify-between pt-2 select-none z-20">
+<span class="font-numeral text-[14px] font-bold text-text-primary tracking-tight">09:41</span>
+<div class="flex items-center space-x-2 text-text-primary">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- Header Section -->
+<header class="px-5 pt-3 pb-3 flex justify-between items-center w-full">
+<div class="flex items-center gap-2.5">
+<h1 class="font-display text-display text-text-primary">My words</h1>
+<div class="h-6 px-2 bg-accent-tint rounded-full flex items-center justify-center">
+<span class="font-numeral text-caption text-accent-fill font-bold">86</span>
+</div>
+</div>
+<!-- Streak Chip -->
+<div class="h-8 px-3 bg-accent-tint rounded-full flex items-center gap-1.5 active:scale-95 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined fill-icon text-[18px] text-accent-fill" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-numeral text-label text-accent-fill font-bold">12</span>
+</div>
+</header>
+<!-- Scrollable Main Content -->
+<main class="flex-1 px-5 flex flex-col gap-4 overflow-y-auto no-scrollbar pt-1">
+<!-- Search Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-secondary text-[22px]" data-icon="search">search</span>
+</div>
+<input class="w-full h-[52px] pl-11 pr-4 bg-surface text-text-primary placeholder:text-text-secondary font-body text-body rounded-xl border border-control-border focus:border-accent-fill focus:ring-2 focus:ring-accent-fill focus:outline-none transition-all" placeholder="Search words" type="text"/>
+</div>
+<!-- Filter Chips Row -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+<button class="h-8 px-4 rounded-full bg-accent-fill text-surface font-label text-label font-medium whitespace-nowrap active:scale-95 transition-all shadow-sm">
+          All
+        </button>
+<button class="h-8 px-4 rounded-full bg-surface text-text-secondary border border-hairline-divider hover:border-control-border font-label text-label font-medium whitespace-nowrap active:scale-95 transition-all">
+          Learning
+        </button>
+<button class="h-8 px-4 rounded-full bg-surface text-text-secondary border border-hairline-divider hover:border-control-border font-label text-label font-medium whitespace-nowrap active:scale-95 transition-all">
+          Mastered
+        </button>
+</div>
+<!-- Focal Summary Strip -->
+<div class="w-full bg-surface rounded-2xl p-4 shadow-card-soft border border-hairline-divider/50 flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="font-numeral font-bold text-caption text-status-success-text">52</span>
+<span class="font-body text-caption text-text-secondary">mastered</span>
+<span class="text-text-secondary text-caption mx-0.5">·</span>
+<span class="font-numeral font-bold text-caption text-accent-fill">34</span>
+<span class="font-body text-caption text-text-secondary">learning</span>
+</div>
+<span class="font-numeral text-caption text-text-secondary font-medium">60% complete</span>
+</div>
+<!-- Two-Color Progress Bar (8px height) -->
+<div class="w-full h-2 bg-surface-alt rounded-full overflow-hidden flex">
+<!-- Mastered (60%) -->
+<div class="h-full bg-support-strong rounded-l-full" style="width: 60%;"></div>
+<!-- Learning (40%) -->
+<div class="h-full bg-secondary-container" style="width: 40%;"></div>
+</div>
+</div>
+<!-- Word List: Grouped Card Container -->
+<div class="w-full bg-surface rounded-[20px] shadow-card-soft border border-hairline-divider/40 divide-y divide-hairline-divider overflow-hidden mb-4">
+<!-- Word Item 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-alt/40 transition-colors active:scale-[0.99] duration-150 cursor-pointer">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-body text-body font-semibold text-text-primary tracking-wide">commute</span>
+<span class="font-body text-caption text-text-secondary">to travel to work</span>
+</div>
+<div class="h-7 px-3 bg-status-success-bg rounded-full flex items-center justify-center shrink-0">
+<span class="font-label text-caption text-status-success-text font-medium">Mastered</span>
+</div>
+</div>
+<!-- Word Item 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-alt/40 transition-colors active:scale-[0.99] duration-150 cursor-pointer">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-body text-body font-semibold text-text-primary tracking-wide">itinerary</span>
+<span class="font-body text-caption text-text-secondary">a planned route</span>
+</div>
+<div class="h-7 px-3 bg-accent-tint rounded-full flex items-center justify-center shrink-0">
+<span class="font-label text-caption text-accent-fill font-medium">Learning</span>
+</div>
+</div>
+<!-- Word Item 3 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-alt/40 transition-colors active:scale-[0.99] duration-150 cursor-pointer">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-body text-body font-semibold text-text-primary tracking-wide">reliable</span>
+<span class="font-body text-caption text-text-secondary">can be trusted</span>
+</div>
+<div class="h-7 px-3 bg-status-success-bg rounded-full flex items-center justify-center shrink-0">
+<span class="font-label text-caption text-status-success-text font-medium">Mastered</span>
+</div>
+</div>
+<!-- Word Item 4 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-alt/40 transition-colors active:scale-[0.99] duration-150 cursor-pointer">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-body text-body font-semibold text-text-primary tracking-wide">wanderlust</span>
+<span class="font-body text-caption text-text-secondary">strong wish to travel</span>
+</div>
+<div class="h-7 px-3 bg-status-info-bg rounded-full flex items-center justify-center shrink-0">
+<span class="font-label text-caption text-status-info-text font-medium">New</span>
+</div>
+</div>
+<!-- Word Item 5 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-alt/40 transition-colors active:scale-[0.99] duration-150 cursor-pointer">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-body text-body font-semibold text-text-primary tracking-wide">deadline</span>
+<span class="font-body text-caption text-text-secondary">latest time to finish</span>
+</div>
+<div class="h-7 px-3 bg-accent-tint rounded-full flex items-center justify-center shrink-0">
+<span class="font-label text-caption text-accent-fill font-medium">Learning</span>
+</div>
+</div>
+<!-- Word Item 6 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-alt/40 transition-colors active:scale-[0.99] duration-150 cursor-pointer">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-body text-body font-semibold text-text-primary tracking-wide">borrow</span>
+<span class="font-body text-caption text-text-secondary">take and give back</span>
+</div>
+<div class="h-7 px-3 bg-status-success-bg rounded-full flex items-center justify-center shrink-0">
+<span class="font-label text-caption text-status-success-text font-medium">Mastered</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Tab Bar (Docked Fixed Mobile Navigation) -->
+<nav class="fixed bottom-0 left-0 right-0 w-full max-w-[393px] mx-auto z-50 bg-surface border-t border-hairline-divider flex justify-around items-center px-4 pt-2 pb-7">
+<!-- Learn Tab (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-secondary font-caption active:scale-95 transition-transform duration-150 group">
+<span class="flex items-center justify-center w-12 h-7 rounded-full group-hover:bg-surface-alt transition-colors">
+<span class="material-symbols-outlined text-[24px]" data-icon="menu_book">menu_book</span>
+</span>
+<span class="font-caption text-caption mt-0.5">Learn</span>
+</button>
+<!-- Words Tab (Active) -->
+<button class="flex flex-col items-center justify-center text-accent-fill font-caption active:scale-95 transition-transform duration-150">
+<span class="flex items-center justify-center w-12 h-7 bg-accent-tint rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px] text-accent-fill" data-icon="layers">layers</span>
+</span>
+<span class="font-caption text-caption font-semibold mt-0.5">Words</span>
+</button>
+<!-- Progress Tab (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-secondary font-caption active:scale-95 transition-transform duration-150 group">
+<span class="flex items-center justify-center w-12 h-7 rounded-full group-hover:bg-surface-alt transition-colors">
+<span class="material-symbols-outlined text-[24px]" data-icon="bar_chart">bar_chart</span>
+</span>
+<span class="font-caption text-caption mt-0.5">Progress</span>
+</button>
+<!-- Profile Tab (Inactive) -->
+<button class="flex flex-col items-center justify-center text-text-secondary font-caption active:scale-95 transition-transform duration-150 group">
+<span class="flex items-center justify-center w-12 h-7 rounded-full group-hover:bg-surface-alt transition-colors">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+</span>
+<span class="font-caption text-caption mt-0.5">Profile</span>
+</button>
+</nav>
+<!-- iOS Home Indicator Safe Area spacer -->
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-text-primary/20 rounded-full pointer-events-none z-50"></div>
+</div>
+</body></html>

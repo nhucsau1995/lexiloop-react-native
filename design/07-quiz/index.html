@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LexiLoop - Quiz Exercise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-app': '#F4FBFC',
+            'surface': '#FFFFFF',
+            'surface-alt': '#EAF5F7',
+            'accent': '#00A9CE',
+            'accent-fill': '#007791',
+            'accent-fill-pressed': '#006F88',
+            'accent-tint': '#DDF3F8',
+            'text-primary': '#0C1B1F',
+            'text-secondary': '#46595E',
+            'text-tertiary': '#5F7277',
+            'hairline': '#D5E4E7',
+            'control-border': '#699C9F',
+            'status-success': '#0E7C3A',
+            'status-success-bg': '#E3F4E9',
+            'status-danger': '#CE2020',
+          },
+          fontFamily: {
+            chakra: ['"Chakra Petch"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Chakra Petch', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .sheet-shadow {
+      box-shadow: 0 -8px 24px rgba(12, 27, 31, 0.08), 0 -1px 3px rgba(12, 27, 31, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-slate-100 flex items-center justify-center min-h-full p-0 sm:py-6">
+  <!-- Mobile container 393x852 -->
+  <div class="w-[393px] h-[852px] bg-[#F4FBFC] relative flex flex-col justify-between overflow-hidden shadow-2xl sm:rounded-[44px] border border-[#D5E4E7]">
+    
+    <!-- iOS / App Status Bar & Top Navigation -->
+    <div class="pt-12 px-5 pb-3">
+      <!-- Lesson Top Bar: Close, Progress Bar, Hearts Count -->
+      <div class="flex items-center gap-3.5">
+        <!-- Close X Icon Button -->
+        <button type="button" aria-label="Exit lesson" class="w-9 h-9 flex items-center justify-center rounded-full text-[#46595E] hover:bg-[#EAF5F7] active:scale-95 transition-all">
+          <svg class="w-6 h-6 stroke-[1.75]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Progress Bar (8px pill track, #00A9CE fill 70%) -->
+        <div class="flex-1 h-2 bg-[#EAF5F7] rounded-full overflow-hidden">
+          <div class="h-full bg-[#00A9CE] rounded-full" style="width: 70%;"></div>
+        </div>
+
+        <!-- Hearts Indicator: count + heart outline icon -->
+        <div class="flex items-center gap-1.5 px-2.5 py-1 bg-white rounded-full border border-[#D5E4E7]/60 shadow-sm">
+          <span class="font-mono text-sm font-semibold text-[#0C1B1F]">3</span>
+          <svg class="w-4 h-4 text-[#CE2020] stroke-[1.75]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 px-5 pt-4 flex flex-col justify-start">
+      <!-- Instruction Caption -->
+      <div class="mb-3">
+        <p class="text-[14px] font-medium tracking-wide text-[#46595E]">Choose the meaning of</p>
+      </div>
+
+      <!-- FOCAL Word Section -->
+      <div class="flex items-center gap-3 mb-7">
+        <h1 class="text-[32px] font-bold leading-none tracking-[-0.02em] text-[#0C1B1F]">reliable</h1>
+        <button type="button" aria-label="Listen pronunciation" class="w-9 h-9 rounded-full bg-[#DDF3F8] text-[#007791] flex items-center justify-center hover:bg-[#007791] hover:text-white transition-colors active:scale-95">
+          <svg class="w-5 h-5 stroke-[1.75]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.08-1.64.222-2.422a1.875 1.875 0 011.938-1.328h2.34z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Stacked Option Cards -->
+      <div class="flex flex-col gap-3">
+        
+        <!-- Option 1: Unselected -->
+        <button type="button" class="w-full h-14 px-4 bg-white rounded-[16px] border-[1.5px] border-[#D5E4E7] flex items-center justify-between text-left transition-all active:scale-[0.99] hover:border-[#699C9F]">
+          <span class="text-[16px] font-normal text-[#0C1B1F]">easy to break</span>
+          <span class="w-5 h-5 rounded-full border-[1.5px] border-[#D5E4E7]"></span>
+        </button>
+
+        <!-- Option 2: SELECTED CORRECT -->
+        <button type="button" class="w-full h-14 px-4 bg-[#E3F4E9] rounded-[16px] border-[1.5px] border-[#0E7C3A] flex items-center justify-between text-left shadow-sm">
+          <span class="text-[16px] font-semibold text-[#0E7C3A]">can be trusted</span>
+          <div class="w-6 h-6 rounded-full bg-[#0E7C3A] text-white flex items-center justify-center">
+            <svg class="w-4 h-4 stroke-[2.2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </div>
+        </button>
+
+        <!-- Option 3: Unselected -->
+        <button type="button" class="w-full h-14 px-4 bg-white rounded-[16px] border-[1.5px] border-[#D5E4E7] flex items-center justify-between text-left transition-all active:scale-[0.99] hover:border-[#699C9F]">
+          <span class="text-[16px] font-normal text-[#0C1B1F]">very expensive</span>
+          <span class="w-5 h-5 rounded-full border-[1.5px] border-[#D5E4E7]"></span>
+        </button>
+
+        <!-- Option 4: Unselected -->
+        <button type="button" class="w-full h-14 px-4 bg-white rounded-[16px] border-[1.5px] border-[#D5E4E7] flex items-center justify-between text-left transition-all active:scale-[0.99] hover:border-[#699C9F]">
+          <span class="text-[16px] font-normal text-[#0C1B1F]">hard to find</span>
+          <span class="w-5 h-5 rounded-full border-[1.5px] border-[#D5E4E7]"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Bottom Feedback Sheet (Active Correct State) -->
+    <div class="w-full bg-[#E3F4E9] rounded-t-[24px] pt-5 px-5 pb-9 sheet-shadow border-t border-[#0E7C3A]/20">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2.5">
+          <!-- Checkmark Icon circle -->
+          <div class="w-8 h-8 rounded-full bg-[#0E7C3A] text-white flex items-center justify-center shadow-sm">
+            <svg class="w-5 h-5 stroke-[2.2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </div>
+          <span class="text-[20px] font-semibold text-[#0E7C3A] leading-tight">Correct!</span>
+        </div>
+
+        <!-- XP Badge in JetBrains Mono -->
+        <div class="px-3 py-1 rounded-full bg-white border border-[#0E7C3A]/30 text-[#0E7C3A] font-mono text-[14px] font-semibold tracking-tight shadow-xs">
+          +10 XP
+        </div>
+      </div>
+
+      <!-- Full-width Primary Pill Continue Button -->
+      <button type="button" class="w-full h-14 bg-[#007791] hover:bg-[#006F88] active:bg-[#006F88] active:scale-[0.99] text-white rounded-full font-medium text-[15px] flex items-center justify-center gap-2 transition-all shadow-md">
+        <span>Continue</span>
+        <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </button>
+
+      <!-- Home bar indicator spacing clearance -->
+      <div class="w-32 h-1 bg-[#0C1B1F]/15 rounded-full mx-auto mt-4"></div>
+    </div>
+
+  </div>
+</body>
+</html>

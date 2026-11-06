@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LexiLoop - Level Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary": "#804609",
+            "background": "#F4FBFC",
+            "tertiary-container": "#9d5e22",
+            "text-secondary": "#46595E",
+            "inverse-primary": "#7cd2ef",
+            "outline": "#6f797d",
+            "status-info-bg": "#E0EFF2",
+            "on-secondary-fixed": "#001f28",
+            "surface-container-low": "#f1f4f6",
+            "text-tertiary": "#5F7277",
+            "on-primary-container": "#daf4ff",
+            "primary": "#005d72",
+            "control-border": "#699C9F",
+            "hairline-divider": "#D5E4E7",
+            "surface-alt": "#EAF5F7",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#57d5fc",
+            "status-success-bg": "#E3F4E9",
+            "surface-container-high": "#e5e9eb",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#004e60",
+            "secondary-fixed": "#b6ebff",
+            "surface-bright": "#f7fafc",
+            "support-strong": "#25AA08",
+            "surface-tint": "#00677e",
+            "on-secondary-container": "#005c72",
+            "on-surface-variant": "#3f484c",
+            "on-tertiary-fixed": "#2e1500",
+            "status-success-text": "#0E7C3A",
+            "on-surface": "#181c1e",
+            "on-error": "#ffffff",
+            "status-danger-bg": "#FBE5E5",
+            "outline-variant": "#bec8cd",
+            "status-warning-text": "#A75906",
+            "surface-container-lowest": "#ffffff",
+            "status-warning-bg": "#FAEFE1",
+            "on-secondary-fixed-variant": "#004e60",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#5ad8ff",
+            "support": "#A7F797",
+            "primary-fixed": "#b5ebff",
+            "on-error-container": "#93000a",
+            "status-info-text": "#00738C",
+            "surface-container-highest": "#e0e3e5",
+            "status-danger-text": "#CE2020",
+            "primary-fixed-dim": "#7cd2ef",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface": "#FFFFFF",
+            "on-primary-fixed": "#001f28",
+            "accent-pressed": "#006F88",
+            "on-tertiary-container": "#ffede1",
+            "inverse-surface": "#2d3133",
+            "surface-variant": "#e0e3e5",
+            "inverse-on-surface": "#eef1f3",
+            "on-background": "#181c1e",
+            "accent-tint": "#DDF3F8",
+            "secondary": "#00677f",
+            "text-primary": "#0C1B1F",
+            "surface-container": "#ebeef0",
+            "primary-container": "#007791",
+            "tertiary-fixed-dim": "#ffb77c",
+            "surface-dim": "#d7dadc",
+            "accent-fill": "#007791",
+            "on-tertiary-fixed-variant": "#6d3900",
+            "tertiary-fixed": "#ffdcc2"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "16px",
+            "space-sm": "8px",
+            "space-2xl": "32px",
+            "space-xs": "4px",
+            "space-md": "12px",
+            "space-xl": "24px",
+            "margin": "20px",
+            "space-lg": "16px"
+          },
+          "fontFamily": {
+            "label": ["Chakra Petch", "sans-serif"],
+            "display": ["Chakra Petch", "sans-serif"],
+            "body": ["Chakra Petch", "sans-serif"],
+            "numeral": ["JetBrains Mono", "monospace"],
+            "caption": ["Chakra Petch", "sans-serif"],
+            "title": ["Chakra Petch", "sans-serif"]
+          },
+          "fontSize": {
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "numeral": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          },
+          "boxShadow": {
+            "ambient": "0 1px 2px rgba(12,27,31,0.04), 0 8px 24px rgba(12,27,31,0.06)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center selection:bg-accent-tint selection:text-accent-fill">
+<div class="relative w-full max-w-[393px] h-[852px] bg-background flex flex-col justify-between overflow-hidden shadow-2xl">
+<div class="w-full flex flex-col px-5 pt-[52px]">
+<div class="flex items-center justify-between h-10 w-full mb-6">
+<button aria-label="Back" class="w-10 h-10 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-alt active:scale-95 transition-all duration-150" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div class="flex items-center gap-3">
+<span class="font-caption text-caption text-text-secondary">Step 2 of 2</span>
+<div class="w-16 h-2 bg-surface-alt rounded-full overflow-hidden flex">
+<div class="w-full h-full bg-[#00A9CE] rounded-full transition-all duration-300"></div>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h1 class="font-display text-display text-text-primary tracking-tight">What is your English level?</h1>
+<p class="font-body text-body text-text-secondary mt-1">We'll adapt your daily vocabulary challenge accordingly.</p>
+</div>
+<div aria-label="English Level Selection" class="flex flex-col gap-3" role="radiogroup">
+<div aria-checked="false" class="level-card group relative bg-surface border-[1.5px] border-hairline-divider rounded-2xl p-4 shadow-ambient flex items-center justify-between cursor-pointer transition-all duration-150 hover:border-control-border active:scale-[0.99]" onclick="selectLevel(this)" role="radio" tabindex="0">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-full bg-surface-alt flex items-center justify-center text-accent-fill flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">eco</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title text-body font-semibold text-text-primary">Beginner</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-alt text-text-secondary font-caption text-[12px] leading-tight font-medium">A1 - A2</span>
+</div>
+<span class="font-caption text-caption text-text-secondary mt-0.5">I know some basic words</span>
+</div>
+</div>
+<div class="selection-indicator w-5 h-5 rounded-full border border-hairline-divider flex items-center justify-center opacity-0 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-[16px] text-accent-fill hidden">check</span>
+</div>
+</div>
+<div aria-checked="true" class="level-card group relative bg-accent-tint border-2 border-accent-fill rounded-2xl p-4 shadow-ambient flex items-center justify-between cursor-pointer transition-all duration-150 active:scale-[0.99]" onclick="selectLevel(this)" role="radio" tabindex="0">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-full bg-surface flex items-center justify-center text-accent-fill flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">forum</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title text-body font-semibold text-text-primary">Intermediate</span>
+<span class="px-2 py-0.5 rounded-full bg-surface text-accent-fill font-caption text-[12px] leading-tight font-medium">B1 - B2</span>
+</div>
+<span class="font-caption text-caption text-text-secondary mt-0.5">I can hold simple conversations</span>
+</div>
+</div>
+<div class="selection-indicator flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div aria-checked="false" class="level-card group relative bg-surface border-[1.5px] border-hairline-divider rounded-2xl p-4 shadow-ambient flex items-center justify-between cursor-pointer transition-all duration-150 hover:border-control-border active:scale-[0.99]" onclick="selectLevel(this)" role="radio" tabindex="0">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-full bg-surface-alt flex items-center justify-center text-accent-fill flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title text-body font-semibold text-text-primary">Advanced</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-alt text-text-secondary font-caption text-[12px] leading-tight font-medium">C1</span>
+</div>
+<span class="font-caption text-caption text-text-secondary mt-0.5">I want to sound natural</span>
+</div>
+</div>
+<div class="selection-indicator w-5 h-5 rounded-full border border-hairline-divider flex items-center justify-center opacity-0 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-[16px] text-accent-fill hidden">check</span>
+</div>
+</div>
+</div>
+<div class="mt-7">
+<h2 class="font-title text-title text-text-primary">Daily goal</h2>
+<div aria-label="Daily Goal selection" class="grid grid-cols-3 gap-2.5 mt-3" role="radiogroup">
+<button aria-checked="false" class="goal-chip h-10 rounded-full border-[1.5px] border-hairline-divider bg-surface text-text-primary font-caption text-caption flex items-center justify-center transition-all duration-150 active:scale-95 hover:border-control-border" onclick="selectGoal(this, 'About 3 minutes a day')" role="radio" type="button">
+            5 words
+          </button>
+<button aria-checked="true" class="goal-chip h-10 rounded-full bg-accent-fill text-on-primary font-caption text-caption font-medium flex items-center justify-center shadow-sm transition-all duration-150 active:scale-95" onclick="selectGoal(this, 'About 5 minutes a day')" role="radio" type="button">
+            10 words
+          </button>
+<button aria-checked="false" class="goal-chip h-10 rounded-full border-[1.5px] border-hairline-divider bg-surface text-text-primary font-caption text-caption flex items-center justify-center transition-all duration-150 active:scale-95 hover:border-control-border" onclick="selectGoal(this, 'About 8 minutes a day')" role="radio" type="button">
+            15 words
+          </button>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-2.5 pl-1 flex items-center gap-1.5" id="goal-estimate">
+<span class="material-symbols-outlined text-[16px] text-text-tertiary">schedule</span>
+<span>About 5 minutes a day</span>
+</p>
+</div>
+</div>
+<div class="w-full px-5 pb-[42px] pt-3 bg-gradient-to-t from-background via-background to-transparent flex flex-col">
+<button class="w-full h-14 bg-accent-fill hover:bg-accent-pressed active:scale-[0.98] text-on-primary font-label text-label font-medium rounded-full flex items-center justify-center transition-all duration-150 shadow-md hover:shadow-lg" type="button">
+        Start learning
+      </button>
+<div class="w-32 h-1 bg-text-primary/20 rounded-full mx-auto mt-4"></div>
+</div>
+</div>
+<script>
+    function selectLevel(selectedCard) {
+      const cards = document.querySelectorAll('.level-card');
+      cards.forEach(card => {
+        card.setAttribute('aria-checked', 'false');
+        card.className = 'level-card group relative bg-surface border-[1.5px] border-hairline-divider rounded-2xl p-4 shadow-ambient flex items-center justify-between cursor-pointer transition-all duration-150 hover:border-control-border active:scale-[0.99]';
+        
+        const iconContainer = card.querySelector('.w-11');
+        iconContainer.className = 'w-11 h-11 rounded-full bg-surface-alt flex items-center justify-center text-accent-fill flex-shrink-0';
+        
+        const badge = card.querySelector('.px-2');
+        badge.className = 'px-2 py-0.5 rounded-full bg-surface-alt text-text-secondary font-caption text-[12px] leading-tight font-medium';
+        
+        const indicator = card.querySelector('.selection-indicator');
+        indicator.className = 'selection-indicator w-5 h-5 rounded-full border border-hairline-divider flex items-center justify-center opacity-0 group-hover:opacity-40 transition-opacity';
+        indicator.innerHTML = '<span class="material-symbols-outlined text-[16px] text-accent-fill hidden">check</span>';
+      });
+
+      selectedCard.setAttribute('aria-checked', 'true');
+      selectedCard.className = 'level-card group relative bg-accent-tint border-2 border-accent-fill rounded-2xl p-4 shadow-ambient flex items-center justify-between cursor-pointer transition-all duration-150 active:scale-[0.99]';
+      
+      const selIconContainer = selectedCard.querySelector('.w-11');
+      selIconContainer.className = 'w-11 h-11 rounded-full bg-surface flex items-center justify-center text-accent-fill flex-shrink-0 shadow-sm';
+      
+      const selBadge = selectedCard.querySelector('.px-2');
+      selBadge.className = 'px-2 py-0.5 rounded-full bg-surface text-accent-fill font-caption text-[12px] leading-tight font-medium';
+      
+      const selIndicator = selectedCard.querySelector('.selection-indicator');
+      selIndicator.className = 'selection-indicator flex items-center justify-center text-accent-fill';
+      selIndicator.innerHTML = '<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: \'FILL\' 1;">check_circle</span>';
+    }
+
+    function selectGoal(selectedBtn, durationText) {
+      const chips = document.querySelectorAll('.goal-chip');
+      chips.forEach(chip => {
+        chip.setAttribute('aria-checked', 'false');
+        chip.className = 'goal-chip h-10 rounded-full border-[1.5px] border-hairline-divider bg-surface text-text-primary font-caption text-caption flex items-center justify-center transition-all duration-150 active:scale-95 hover:border-control-border';
+      });
+
+      selectedBtn.setAttribute('aria-checked', 'true');
+      selectedBtn.className = 'goal-chip h-10 rounded-full bg-accent-fill text-on-primary font-caption text-caption font-medium flex items-center justify-center shadow-sm transition-all duration-150 active:scale-95';
+
+      const estimateEl = document.getElementById('goal-estimate');
+      if (estimateEl) {
+        estimateEl.innerHTML = `<span class="material-symbols-outlined text-[16px] text-text-tertiary">schedule</span><span>${durationText}</span>`;
+      }
+    }
+  </script>
+</body></html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LexiLoop - Progress</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#f7fafc",
+            "status-danger-bg": "#FBE5E5",
+            "inverse-primary": "#7cd2ef",
+            "accent-pressed": "#006F88",
+            "status-info-text": "#00738C",
+            "surface-container-low": "#f1f4f6",
+            "on-surface-variant": "#3f484c",
+            "control-border": "#699C9F",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-container": "#ffede1",
+            "primary-fixed-dim": "#7cd2ef",
+            "text-secondary": "#46595E",
+            "surface-alt": "#EAF5F7",
+            "on-secondary-fixed-variant": "#004e60",
+            "on-surface": "#181c1e",
+            "on-tertiary-fixed": "#2e1500",
+            "secondary-fixed": "#b6ebff",
+            "on-background": "#181c1e",
+            "accent-fill": "#007791",
+            "status-danger-text": "#CE2020",
+            "support-strong": "#25AA08",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#004e60",
+            "inverse-on-surface": "#eef1f3",
+            "secondary-fixed-dim": "#57d5fc",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#9d5e22",
+            "surface-container-high": "#e5e9eb",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#daf4ff",
+            "secondary-container": "#5ad8ff",
+            "tertiary": "#804609",
+            "primary-fixed": "#b5ebff",
+            "status-success-bg": "#E3F4E9",
+            "outline": "#6f797d",
+            "primary": "#005d72",
+            "surface-dim": "#d7dadc",
+            "background": "#F4FBFC",
+            "tertiary-fixed-dim": "#ffb77c",
+            "support": "#A7F797",
+            "on-primary-fixed": "#001f28",
+            "surface-tint": "#00677e",
+            "status-info-bg": "#E0EFF2",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "primary-container": "#007791",
+            "accent-tint": "#DDF3F8",
+            "status-success-text": "#0E7C3A",
+            "outline-variant": "#bec8cd",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#ffdcc2",
+            "text-tertiary": "#5F7277",
+            "on-tertiary-fixed-variant": "#6d3900",
+            "status-warning-text": "#A75906",
+            "surface-container-highest": "#e0e3e5",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed": "#001f28",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#2d3133",
+            "on-secondary-container": "#005c72",
+            "status-warning-bg": "#FAEFE1",
+            "surface-container": "#ebeef0",
+            "hairline-divider": "#D5E4E7",
+            "surface": "#FFFFFF",
+            "secondary": "#00677f",
+            "text-primary": "#0C1B1F"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "gutter": "16px",
+            "space-2xl": "32px",
+            "space-sm": "8px",
+            "space-md": "12px",
+            "margin": "20px",
+            "space-xl": "24px",
+            "space-lg": "16px"
+          },
+          "fontFamily": {
+            "display": ["Chakra Petch"],
+            "body": ["Chakra Petch"],
+            "numeral": ["JetBrains Mono"],
+            "caption": ["Chakra Petch"],
+            "title": ["Chakra Petch"],
+            "label": ["Chakra Petch"]
+          },
+          "fontSize": {
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "numeral": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "700"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "500"
+              }
+            ]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .ambient-card {
+      box-shadow: 0 1px 2px rgba(12, 27, 31, 0.04), 0 8px 24px rgba(12, 27, 31, 0.06);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-text-primary min-h-screen flex justify-center items-start antialiased selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Viewport Container (393px width fixed design target) -->
+<main class="w-full max-w-[393px] min-h-screen bg-background relative flex flex-col pb-28">
+<!-- Top Safe Area Buffer (approx 44-59px) & Screen Header -->
+<header class="pt-14 px-5 pb-3 flex justify-between items-center w-full">
+<h1 class="text-display font-display text-text-primary tracking-tight">Progress</h1>
+<!-- Flame Streak Pill Badge -->
+<div aria-label="12 day streak" class="flex items-center gap-1.5 px-3 py-1.5 bg-accent-tint rounded-full">
+<span class="material-symbols-outlined text-[18px] text-accent-fill select-none" data-icon="local_fire_department" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-label font-numeral font-bold text-accent-fill leading-none">12</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<section class="px-5 pt-3 flex flex-col gap-4">
+<!-- 1. Focal Element - Hero Streak Card -->
+<article class="w-full rounded-[20px] bg-gradient-to-br from-accent-fill to-accent-pressed p-5 text-surface ambient-card relative overflow-hidden">
+<!-- Subtle Vector Graphic Overlay -->
+<div class="absolute -right-6 -bottom-6 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[160px] text-surface select-none" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-surface/15 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-surface text-2xl" data-icon="local_fire_department" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="text-numeral font-numeral text-surface leading-none font-bold">12</span>
+<span class="text-label font-display text-surface font-semibold">day streak</span>
+</div>
+<span class="text-caption font-caption text-surface/80">Best: 15 days</span>
+</div>
+</div>
+</div>
+<!-- Weekday Tracking Dots (M, T, W, T, F, S, S) -->
+<div class="pt-2 border-t border-surface/20 flex justify-between items-center">
+<!-- Mon: Completed -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="text-[12px] font-caption text-surface/80 font-medium">M</span>
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-fill text-[14px] font-bold" data-icon="check">check</span>
+</div>
+</div>
+<!-- Tue: Completed -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="text-[12px] font-caption text-surface/80 font-medium">T</span>
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-fill text-[14px] font-bold" data-icon="check">check</span>
+</div>
+</div>
+<!-- Wed: Completed -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="text-[12px] font-caption text-surface/80 font-medium">W</span>
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-fill text-[14px] font-bold" data-icon="check">check</span>
+</div>
+</div>
+<!-- Thu: Completed -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="text-[12px] font-caption text-surface/80 font-medium">T</span>
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-fill text-[14px] font-bold" data-icon="check">check</span>
+</div>
+</div>
+<!-- Fri: Completed -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="text-[12px] font-caption text-surface/80 font-medium">F</span>
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-fill text-[14px] font-bold" data-icon="check">check</span>
+</div>
+</div>
+<!-- Sat: Completed / Active -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="text-[12px] font-caption text-surface/80 font-medium">S</span>
+<div class="w-6 h-6 rounded-full bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-fill text-[14px] font-bold" data-icon="check">check</span>
+</div>
+</div>
+<!-- Sun: Today / In Progress (Outlined) -->
+<div class="flex flex-col items-center gap-1.5">
+<span class="text-[12px] font-caption text-surface font-bold">S</span>
+<div class="w-6 h-6 rounded-full border-2 border-surface flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-surface"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- 2. XP This Week Card -->
+<article class="w-full bg-surface rounded-[20px] p-5 ambient-card flex flex-col gap-4">
+<div class="flex justify-between items-baseline">
+<h2 class="text-title font-title text-text-primary">XP this week</h2>
+<span class="text-title font-numeral text-accent-fill font-bold">460 XP</span>
+</div>
+<!-- Vertical Bar Chart -->
+<div class="h-36 pt-4 flex items-end justify-between gap-2.5">
+<!-- Mon: 40 XP -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end">
+<span class="text-[12px] font-numeral text-text-secondary leading-none">40</span>
+<div class="w-full max-w-[28px] bg-secondary-container/60 hover:bg-secondary-container transition-all rounded-t-lg" style="height: 33.3%;"></div>
+<span class="text-caption font-caption text-text-secondary">Mon</span>
+</div>
+<!-- Tue: 80 XP -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end">
+<span class="text-[12px] font-numeral text-text-secondary leading-none">80</span>
+<div class="w-full max-w-[28px] bg-secondary-container/60 hover:bg-secondary-container transition-all rounded-t-lg" style="height: 66.6%;"></div>
+<span class="text-caption font-caption text-text-secondary">Tue</span>
+</div>
+<!-- Wed: 60 XP -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end">
+<span class="text-[12px] font-numeral text-text-secondary leading-none">60</span>
+<div class="w-full max-w-[28px] bg-secondary-container/60 hover:bg-secondary-container transition-all rounded-t-lg" style="height: 50%;"></div>
+<span class="text-caption font-caption text-text-secondary">Wed</span>
+</div>
+<!-- Thu: 120 XP (Peak) -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end">
+<span class="text-[12px] font-numeral text-text-secondary leading-none font-semibold">120</span>
+<div class="w-full max-w-[28px] bg-secondary-container/60 hover:bg-secondary-container transition-all rounded-t-lg" style="height: 100%;"></div>
+<span class="text-caption font-caption text-text-secondary">Thu</span>
+</div>
+<!-- Fri: 90 XP -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end">
+<span class="text-[12px] font-numeral text-text-secondary leading-none">90</span>
+<div class="w-full max-w-[28px] bg-secondary-container/60 hover:bg-secondary-container transition-all rounded-t-lg" style="height: 75%;"></div>
+<span class="text-caption font-caption text-text-secondary">Fri</span>
+</div>
+<!-- Sat: 0 XP (Rest Day) -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end">
+<span class="text-[12px] font-numeral text-text-secondary leading-none">0</span>
+<div class="w-full max-w-[28px] bg-surface-alt rounded-t-lg" style="height: 6px;"></div>
+<span class="text-caption font-caption text-text-secondary">Sat</span>
+</div>
+<!-- Sun: 70 XP (Today highlighted) -->
+<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end">
+<span class="text-[12px] font-numeral text-accent-fill leading-none font-bold">70</span>
+<div class="w-full max-w-[28px] bg-accent-fill rounded-t-lg ring-2 ring-accent-tint" style="height: 58.3%;"></div>
+<span class="text-caption font-caption text-accent-fill font-bold">Sun</span>
+</div>
+</div>
+</article>
+<!-- 3. Stat Highlights Grid (3 Columns) -->
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Stat: Words learned -->
+<article class="bg-surface rounded-[20px] p-3.5 border border-hairline-divider ambient-card flex flex-col justify-between">
+<span class="text-caption font-caption text-text-secondary leading-tight line-clamp-2">Words learned</span>
+<span class="text-[24px] font-numeral font-bold text-text-primary mt-2">86</span>
+</article>
+<!-- Stat: Accuracy -->
+<article class="bg-surface rounded-[20px] p-3.5 border border-hairline-divider ambient-card flex flex-col justify-between">
+<span class="text-caption font-caption text-text-secondary leading-tight">Accuracy</span>
+<span class="text-[24px] font-numeral font-bold text-text-primary mt-2">88%</span>
+</article>
+<!-- Stat: Minutes -->
+<article class="bg-surface rounded-[20px] p-3.5 border border-hairline-divider ambient-card flex flex-col justify-between">
+<span class="text-caption font-caption text-text-secondary leading-tight">Minutes</span>
+<span class="text-[24px] font-numeral font-bold text-text-primary mt-2">47</span>
+</article>
+</div>
+<!-- 4. Current Level Card -->
+<article class="w-full bg-surface rounded-[20px] p-5 ambient-card flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-accent-tint flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-accent-fill" data-icon="school">school</span>
+</div>
+<span class="text-label font-body text-text-secondary font-medium">Current level</span>
+</div>
+<span class="text-label font-title font-semibold text-text-primary">Intermediate B1</span>
+</div>
+<!-- 8px Pill Track Progress Bar -->
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="62" class="w-full h-2 bg-surface-alt rounded-full overflow-hidden" role="progressbar">
+<div class="h-full bg-secondary-container rounded-full transition-all duration-500 ease-out" style="width: 62%;"></div>
+</div>
+<div class="flex items-center justify-between text-caption font-caption text-text-secondary">
+<span>62% completed</span>
+<span class="font-medium text-accent-fill">38% to B2</span>
+</div>
+</article>
+</section>
+<!-- 5. Bottom Navigation Bar (Docked Fixed Mobile Shell) -->
+<!-- Exactly 4 tabs: Learn, Words, Progress (ACTIVE), Profile -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center px-4 pt-2 pb-8 max-w-[393px] mx-auto bg-surface border-t border-hairline-divider">
+<!-- Tab 1: Learn (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary font-caption group transition-colors" href="#learn">
+<span class="material-symbols-outlined text-[24px] mb-0.5 select-none" data-icon="menu_book">menu_book</span>
+<span class="text-caption font-caption">Learn</span>
+</a>
+<!-- Tab 2: Words (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary font-caption group transition-colors" href="#words">
+<span class="material-symbols-outlined text-[24px] mb-0.5 select-none" data-icon="layers">layers</span>
+<span class="text-caption font-caption">Words</span>
+</a>
+<!-- Tab 3: Progress (ACTIVE MATCH) -->
+<a class="flex flex-col items-center justify-center text-accent-fill font-caption [&amp;&gt;span:first-child]:bg-accent-tint [&amp;&gt;span:first-child]:rounded-full [&amp;&gt;span:first-child]:px-3 [&amp;&gt;span:first-child]:py-1" href="#progress">
+<span class="material-symbols-outlined text-[22px] select-none" data-icon="bar_chart" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+<span class="text-caption font-caption font-bold mt-0.5">Progress</span>
+</a>
+<!-- Tab 4: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary font-caption group transition-colors" href="#profile">
+<span class="material-symbols-outlined text-[24px] mb-0.5 select-none" data-icon="person">person</span>
+<span class="text-caption font-caption">Profile</span>
+</a>
+</nav>
+</main>
+</body></html>

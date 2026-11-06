@@ -6,9 +6,9 @@ import { accuracy, filterWords, lessonXp, masteryCounts, nextMastery, nextStreak
 
 const w = (id: string, mastery: Word['mastery']): Word => ({ id, word: id, phonetic: '', partOfSpeech: 'noun', meaning: '', short: `${id} gloss`, example: '', mastery });
 
-test('lessonXp gives 10 per correct answer plus a bonus', () => {
-  assert.equal(lessonXp(6, 10), 80);
-  assert.equal(lessonXp(12, 10), 120);
+test('lessonXp gives 8 per correct answer plus a bonus', () => {
+  assert.equal(lessonXp(9, 10), 80);
+  assert.equal(lessonXp(12, 10), 88);
   assert.equal(lessonXp(0, 0), 0);
 });
 

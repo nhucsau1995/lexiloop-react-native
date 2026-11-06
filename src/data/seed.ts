@@ -30,6 +30,9 @@ export const todayLesson: Lesson = {
   title: 'Travel and transport',
   totalWords: 10,
   doneWords: 8,
+  priorCorrect: 8,
+  priorAnswered: 9,
+  priorMinutes: 3,
   image: 'wordCommute',
   steps: [
     { kind: 'word', wordId: 'commute' },

@@ -2,12 +2,12 @@ import type { Mastery, Word } from '../data/types.ts';
 
 // Pure learning rules, shared by the Redux slices and unit-tested with node --test.
 
-export const XP_PER_CORRECT = 10;
-export const XP_LESSON_BONUS = 20;
+export const XP_PER_CORRECT = 8;
+export const XP_LESSON_BONUS = 8;
 
 export type WordFilter = 'all' | 'learning' | 'mastered';
 
-/** XP for a finished lesson: 10 per correct answer + a completion bonus. */
+/** XP for a finished lesson: 8 per correct answer + a completion bonus. */
 export function lessonXp(correct: number, total: number): number {
   if (total <= 0) return 0;
   const c = Math.max(0, Math.min(correct, total));

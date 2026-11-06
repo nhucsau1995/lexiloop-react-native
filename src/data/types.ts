@@ -37,6 +37,10 @@ export interface Lesson {
   title: string;
   totalWords: number;
   doneWords: number;
+  // answers and minutes from earlier sessions of this lesson
+  priorCorrect: number;
+  priorAnswered: number;
+  priorMinutes: number;
   image: string;
   steps: LessonStep[];
 }
